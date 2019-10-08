@@ -37,7 +37,9 @@ p {
   height: 100%;
 }
  header {
-           /* background: #FFF; */
+
+
+           background: #FFF;
            color: #FFFFFF;
            font-family: 'Indie Flower', cursive;
            display: table;
@@ -50,7 +52,22 @@ p {
              background-attachment: fixed !important;
              background-size: cover; */
 }
-header:before {
+.imagem-header{
+  height: 100%;
+  background-image: url('../image/headerlow2gray.jpg');
+  background-position: center;
+    background-attachment: fixed !important;
+    background-size: cover;
+
+    position: relative;
+}
+.gray-header{
+  height: 100%;
+  width: 100%;
+  /* background-color: #33333373; */
+
+}
+.head33er:before {
   content: "";
   display: block;
   position: fixed;
@@ -98,11 +115,7 @@ header h2 {
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.gray-header{
-  height: 100%;
-  width: 100%;
-  background-color: #33333373;
-}
+
 .conteudo {
   padding: 4%;
 }
@@ -145,8 +158,8 @@ header h2 {
   background-color: rgba(0,0,0,.5) !important;
 }
 .fundo-galeria{
-  background-image: url('../image/775.jpg');
-  /* background-image: url('../image/header.jpg'); */
+  /* background-image: url('../image/775.jpg'); */
+  background-image: url('../image/775low.jpg');
 
   background-position: center;
     background-attachment: fixed !important;
@@ -161,6 +174,20 @@ header h2 {
 
     margin-right: 0px;
   }
+
+.social{
+  width: 50px;
+  height: auto;
+}
+
+footer{
+  background-color: #252525;
+  min-height: 50px;
+  color: #87aba1;
+}
+.msg-footer{
+      padding-top: 10px;
+}
 /* ======================================================================== */
 
 #demo {
@@ -218,7 +245,10 @@ img.zoom {
 @media (max-width: 575.98px) {
 
   .texto-header{
-    font:5.2em phisio, Arial, Tahoma, Sans-serif;
+    font:4.2em phisio, Arial, Tahoma, Sans-serif;
+  }
+  .texto-header-baixo{
+    font-weight: 300;
   }
   .container-menu{
     position: absolute;
@@ -233,7 +263,16 @@ img.zoom {
   .header-texto{
         padding-top: 50%;
   }
+  img {
 
+    margin: 10px;
+}
+.col-sm-8 > h2{
+  text-align: center;
+}
+.p-social  img{
+  margin: 0px !important;
+}
 
 
 
