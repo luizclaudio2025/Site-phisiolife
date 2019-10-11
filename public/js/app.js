@@ -1,1 +1,2 @@
 smoothScroll.init();
+ 
