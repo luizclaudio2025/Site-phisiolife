@@ -32,103 +32,112 @@ body {
 }
 
 /* ================= WHATSAPP FIXO ================= */
-
 .whatsapp-fixo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  position: fixed !important;
-
-  bottom: 25px !important;
-  right: 25px !important;
-
-  z-index: 99999999 !important;
-
-  display: block !important;
-
+  /* animação de leve salto */
+  animation: bounce 2s infinite;
+  transform-origin: center;
 }
 
-
-/* ===== IMAGEM DESKTOP ===== */
-
-.whatsapp-pc {
-
-  display: block;
-  width: 160px;
-  height: auto;
-
+/* Hover: leve zoom */
+.whatsapp-fixo:hover img {
+  transform: scale(1.1);
 }
 
+/* ================= ANIMAÇÃO BOUNCE ================= */
+@keyframes bounce {
 
-/* ===== IMAGEM MOBILE ===== */
-
-.whatsapp-mobile {
-
-  display: none;
-  width: 65px;
-  height: auto;
-
-}
-
-
-/* ================= TABLET ================= */
-
-@media (max-width: 992px) {
-
-  .whatsapp-pc {
-    width: 140px;
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
+/* ================= IMAGENS ================= */
+/* Desktop */
+.whatsapp-fixo img.whatsapp-pc {
+  width: 180px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
 
-/* ================= MOBILE ================= */
+/* Mobile */
+.whatsapp-fixo img.whatsapp-mobile {
+  width: 50px;
+  height: auto;
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
 
+/* ================= RESPONSIVO ================= */
+
+/* Desktop grande */
+.whatsapp-pc {
+  display: block;
+  width: 180px;
+  height: auto;
+}
+
+.whatsapp-mobile {
+  display: none;
+  width: 70px;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .whatsapp-pc {
+    width: 160px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-
   .whatsapp-pc {
     display: none !important;
   }
 
   .whatsapp-mobile {
     display: block !important;
-    width: 70px;
+    width: 50px;
+    height: auto;
   }
 
   .whatsapp-fixo {
-
-    bottom: 20px !important;
-    right: 20px !important;
-
+    bottom: 20px;
+    right: 20px;
   }
-
 }
 
-
-/* ================= CELULAR ================= */
-
+/* Celular pequeno */
 @media (max-width: 480px) {
-
   .whatsapp-mobile {
-    width: 60px !important;
+    width: 60px;
   }
 
   .whatsapp-fixo {
-
-    bottom: 15px !important;
-    right: 15px !important;
-
+    bottom: 15px;
+    right: 15px;
   }
-
 }
 
-
-/* ================= MUITO PEQUENO ================= */
-
+/* Muito pequeno */
 @media (max-width: 380px) {
-
   .whatsapp-mobile {
-    width: 55px !important;
+    width: 55px;
   }
-
 }
 
 /* ================= CABEÇALHO ================= */
@@ -858,6 +867,7 @@ img {
 .fundo-galeria a:hover::after {
   opacity: 1;
 }
+
 
 /* ================= convenio  ================= */
 .Convenio {
