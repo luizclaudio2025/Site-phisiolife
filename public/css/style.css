@@ -607,7 +607,7 @@ header h2 {
   padding-right: 20px;
   box-sizing: border-box;
   height: 100%;
-  max-height: max-content;
+  max-height: auto;
 
 }
 
