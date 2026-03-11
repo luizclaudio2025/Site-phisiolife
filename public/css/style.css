@@ -530,7 +530,7 @@ header h2 {
   text-align: justify;
   line-height: 1.6;
   height: auto;
-  min-height: 400px;
+  min-height: 500px;
 
 }
 
@@ -548,7 +548,7 @@ header h2 {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   margin-top: 50px;
   border-radius: 20px;
@@ -580,16 +580,31 @@ header h2 {
 
 /* -----CARROSEL------*/
 
+.carousel-indicators {
+  position: absolute;
+  bottom: 5px;
+  /* distância do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
 .container-carrossel {
   padding: 30px;
   border-radius: 20px;
   color: #eee9e9;
-  height: 580px;
+  height: 580px !important;
   text-align: justify;
+  overflow: hidden;
+  bottom: 0;
 }
 
 /* indicadores */
 .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
   background-color: #eae9ef;
 
 }
@@ -597,18 +612,20 @@ header h2 {
 .carrossel {
   background-color: #0a0324;
   color: #eee9e9;
-  height: 200px;
+  height: 100%;
   padding-bottom: 40px;
+  position: relative;
 
 }
 
 .carousel-item {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   box-sizing: border-box;
   height: 100%;
   max-height: auto;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -616,8 +633,11 @@ header h2 {
 
 .container-carrossel p {
   max-width: 100%;
+  max-height: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ================= RESPONSIVIDADE GLOBAL ================= */
@@ -635,6 +655,7 @@ section {
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
+
 }
 
 /* imagens sempre responsivas */
@@ -652,10 +673,13 @@ img {
   .container-sobre {
     padding-left: 40px;
     padding-right: 40px;
+    height: auto;
+    min-height: 480px;
   }
 
   .container-carrossel {
     padding: 25px;
+    height: 600px;
   }
 
   .texto-header {
@@ -681,6 +705,8 @@ img {
     padding-left: 25px;
     padding-right: 25px;
     text-align: left;
+    height: auto;
+    min-height: 400px;
 
 
   }
@@ -691,6 +717,7 @@ img {
 
   .container-carrossel {
     padding: 20px;
+    height: 500px;
   }
 
 }
@@ -698,6 +725,8 @@ img {
 .container-carrossel {
   padding-left: 25px;
   padding-right: 25px;
+  height: 500px;
+  padding: 20px;
 }
 
 .carousel-item {
@@ -712,9 +741,11 @@ img {
 @media (max-width:480px) {
 
   .container-carrossel {
-    padding-left: 18px;
-    padding-right: 18px;
+    height: 460px;
+    /* altura fixa mobile */
+    padding: 18px;
     text-align: left;
+    padding-bottom: 60px;
   }
 
   .carousel-item {
@@ -737,6 +768,10 @@ img {
   padding-right: 18px;
   font-size: 14px;
   line-height: 1.7;
+
+  height: auto;
+  min-height: 300px;
+
 }
 
 .container-carrossel {
@@ -757,9 +792,11 @@ img {
 @media (max-width:380px) {
 
   .container-carrossel {
+    height: 100% !important;
     padding-left: 14px;
     padding-right: 14px;
     font-size: 13px;
+    padding-bottom: 55px;
   }
 
   .texto-header {
@@ -775,14 +812,14 @@ img {
     padding-left: 14px;
     padding-right: 14px;
     font-size: 13px;
+
+    height: auto;
+    min-height: 260px;
   }
 
 }
 
-.container-carrossel {
-  padding: 15px;
-  font-size: 13px;
-}
+
 
 .imglogo {
   max-width: 70%;
@@ -801,6 +838,8 @@ img {
   }
 
   .container-sobre {
+    height: 340px;
+    padding-bottom: 50px;
     padding-left: 12px;
     padding-right: 12px;
     font-size: 12.5px;
@@ -809,6 +848,8 @@ img {
   .container-carrossel {
     padding: 12px;
     font-size: 12.5px;
+    height: 340px;
+    padding-bottom: 50px;
   }
 
   .imglogo {
