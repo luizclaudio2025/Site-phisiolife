@@ -583,7 +583,6 @@ header h2 {
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
-  /* distância do fundo */
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -591,11 +590,13 @@ header h2 {
 
 .container-carrossel {
   padding: 30px;
+  padding-bottom: 80px;
   border-radius: 20px;
   color: #eee9e9;
-  height: 580px !important;
+  min-height: 580px;
+  height: auto;
   text-align: justify;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* indicadores */
@@ -622,6 +623,7 @@ header h2 {
   padding: 20px;
   box-sizing: border-box;
   height: 100%;
+
   max-height: auto;
   align-items: center;
   justify-content: center;
@@ -635,39 +637,27 @@ header h2 {
   max-height: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
 }
 
-/* ================= RESPONSIVIDADE GLOBAL ================= */
 
-/* evitar quebra de layout */
 
-section {
-  width: 100%;
-  overflow: hidden;
-}
+/*=================TABLET=================*/
+@media (max-width:1040px) {
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* ===== SOBRE ===== */
 
-}
+  #sobre .row {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* imagens sempre responsivas */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ================= TABLET ================= */
-
-@media (max-width:1024px) {
+  #sobre .col-sm-4,
+  #sobre .col-sm-8 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 
   .container-sobre {
     padding-left: 40px;
@@ -676,10 +666,46 @@ img {
     min-height: 480px;
   }
 
+  #sobre .img-quemsomos {
+    margin-bottom: 20px;
+    max-width: 60%;
+  }
+
+
+  /* ===== CARROSSEL ===== */
+
+  #carouselServicos .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #carouselServicos .col-sm-4,
+  #carouselServicos .col-sm-8 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
   .container-carrossel {
     padding: 25px;
-    height: 500px;
+    height: auto;
+    min-height: 500px;
   }
+
+  #carouselServicos img {
+    max-width: 280px;
+    /* tamanho da imagem */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #carouselServicos .col-sm-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ===== TEXTO HEADER ===== */
 
   .texto-header {
     font-size: 2.5em;
@@ -689,7 +715,23 @@ img {
 
 /* ================= TABLET PEQUENO ================= */
 
-@media (max-width:768px) {
+@media (max-width:750px) {
+
+  .carousel-item .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-item .col-sm-4,
+  .carousel-item .col-sm-8 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+}
+
+
+@media (max-width:760px) {
 
   .header-conteudo {
     grid-template-columns: 1fr;
@@ -734,22 +776,21 @@ img {
 }
 
 
-
 /* ================= CELULAR GRANDE ================= */
 
 @media (max-width:480px) {
 
   .container-carrossel {
     height: 460px;
-    /* altura fixa mobile */
     padding: 18px;
     text-align: left;
     padding-bottom: 60px;
   }
 
   .carousel-item {
-    padding-left: 12px;
+    padding-left: 20px;
     padding-right: 12px;
+
   }
 
 }
@@ -767,93 +808,14 @@ img {
   padding-right: 18px;
   font-size: 14px;
   line-height: 1.7;
-
   height: auto;
   min-height: 300px;
 
 }
 
-.container-carrossel {
-  padding: 18px;
-  font-size: 14px;
-}
-
 .img-quemsomos {
   margin-top: 25px;
   border-radius: 15px;
-}
-
-
-
-
-/* ================= CELULAR MÉDIO ================= */
-
-@media (max-width:380px) {
-
-  .container-carrossel {
-    height: 380px;
-    padding-left: 14px;
-    padding-right: 14px;
-    font-size: 13px;
-  }
-
-  .texto-header {
-    font-size: 1.6em;
-  }
-
-  .texto-header-baixo {
-    font-size: 13px;
-  }
-
-
-  .container-sobre {
-    padding-left: 14px;
-    padding-right: 14px;
-    font-size: 13px;
-
-    height: auto;
-    min-height: 260px;
-  }
-
-}
-
-
-
-.imglogo {
-  max-width: 70%;
-}
-
-
-
-
-
-/* ================= CELULAR PEQUENO ================= */
-
-@media (max-width:320px) {
-
-  .texto-header {
-    font-size: 1.4em;
-  }
-
-  .container-sobre {
-    height: auto;
-    min-height: 240px;
-
-    padding-left: 12px;
-    padding-right: 12px;
-    font-size: 12.5px;
-  }
-
-  .container-carrossel {
-    padding: 12px;
-    font-size: 12.5px;
-    height: 260px;
-  }
-
-  .imglogo {
-    max-width: 80%;
-  }
-
 }
 
 /* ================= GALERIA  ================= */
