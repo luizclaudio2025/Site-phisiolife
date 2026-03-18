@@ -589,14 +589,14 @@ header h2 {
 }
 
 .container-carrossel {
-  padding: 25px;
+  padding: 30px;
   padding-bottom: 80px;
   border-radius: 20px;
   color: #eee9e9;
   min-height: 580px;
   height: auto;
   text-align: justify;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* indicadores */
@@ -633,14 +633,14 @@ header h2 {
 /* texto dentro do carrossel */
 
 .container-carrossel p {
-  max-width: 320px;
+  max-width: 100%;
   max-height: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
   overflow: visible;
   text-overflow: ellipsis;
-  overflow-y: auto;
 }
+
 
 
 /*=================TABLET=================*/
@@ -756,25 +756,24 @@ header h2 {
     margin-top: 30px;
   }
 
-  .container-carrossel p {
-    max-height: 260px;
-    overflow-y: auto;
-  }
-
   .container-carrossel {
-    padding-left: 25px;
-    padding-right: 25px;
-    height: 500px;
     padding: 20px;
-  }
-
-  .carousel-item {
-    padding-left: 15px;
-    padding-right: 15px;
+    height: 500px;
   }
 
 }
 
+.container-carrossel {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 500px;
+  padding: 20px;
+}
+
+.carousel-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 
 /* ================= CELULAR GRANDE ================= */
@@ -794,35 +793,30 @@ header h2 {
 
   }
 
-  .texto-header {
-    font-size: 1.9em;
-  }
+}
 
-  .texto-header-baixo {
-    font-size: 14px;
-  }
+.texto-header {
+  font-size: 1.9em;
+}
 
-  .container-sobre {
-    padding-left: 18px;
-    padding-right: 18px;
-    font-size: 14px;
-    line-height: 1.7;
-    height: auto;
-    min-height: 300px;
+.texto-header-baixo {
+  font-size: 14px;
+}
 
-  }
-
-  .img-quemsomos {
-    margin-top: 25px;
-    border-radius: 15px;
-  }
-
-  .container-carrossel p {
-    max-height: 230px;
-  }
+.container-sobre {
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  height: auto;
+  min-height: 300px;
 
 }
 
+.img-quemsomos {
+  margin-top: 25px;
+  border-radius: 15px;
+}
 
 /* ================= GALERIA  ================= */
 
