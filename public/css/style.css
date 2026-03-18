@@ -788,6 +788,13 @@ header h2 {
     min-height: 500px;
   }
 
+  .carousel-item .col-sm-4,
+  .carousel-item .col-sm-8 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    min-height: 500px;
+  }
+
   .carousel-item {
     padding-left: 20px;
     padding-right: 12px;
