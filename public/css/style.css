@@ -642,7 +642,22 @@ header h2 {
   overflow-y: auto;
 }
 
+@supports (-webkit-touch-callout: none) {
 
+  .carousel-item {
+    height: auto !important;
+  }
+
+  .container-carrossel {
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .avaliacoes-google {
+    background-attachment: scroll;
+  }
+
+}
 
 /*=================TABLET=================*/
 @media (max-width:1040px) {
