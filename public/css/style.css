@@ -785,6 +785,7 @@ header h2 {
     padding: 18px;
     text-align: left;
     padding-bottom: 60px;
+    min-height: 500px;
   }
 
   .carousel-item {
@@ -1317,21 +1318,4 @@ img.zoom {
 
 .modal-footer {
   display: none;
-}
-
-@supports (-webkit-touch-callout: none) {
-
-  .carousel-item {
-    height: 500px !important;
-  }
-
-  .container-carrossel {
-    height: 500px;
-    overflow: hidden;
-  }
-
-  .avaliacoes-google {
-    background-attachment: scroll;
-  }
-
 }
