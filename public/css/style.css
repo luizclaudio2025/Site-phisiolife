@@ -594,7 +594,7 @@ header h2 {
   border-radius: 20px;
   color: #eee9e9;
   min-height: 580px;
-  height: auto;
+  height: 500px;
   text-align: justify;
   overflow: visible;
 }
