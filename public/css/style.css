@@ -586,9 +586,9 @@ header h2 {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  min-height: 20px !important;
-
 }
+
+/* ===== CONTAINER ===== */
 
 .container-carrossel {
   padding: 30px;
@@ -597,22 +597,22 @@ header h2 {
   color: #eee9e9;
 
   height: 500px;
+  min-height: 500px;
+
   text-align: justify;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* indicadores */
+
 .carousel-indicators li {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: #eae9ef;
-
 }
 
-.carousel-item active {
-  min-height: 500px;
-}
+/* fundo */
 
 .carrossel {
   background-color: #0a0324;
@@ -620,63 +620,47 @@ header h2 {
   height: 100%;
   padding-bottom: 40px;
   position: relative;
-
 }
 
+/* bootstrap precisa disso */
+
+.carousel,
+.carousel-inner,
 .carousel-item {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
   height: 100%;
-  min-height: 500px;
-  align-items: center;
-  justify-content: center;
-
 }
 
-/* texto dentro do carrossel */
+/* texto */
 
 .container-carrossel p {
   max-width: 100%;
-  max-height: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-  overflow: visible;
-  text-overflow: ellipsis;
 }
 
 
+/* ================= TABLET ================= */
 
-/*=================TABLET=================*/
 @media (max-width:1040px) {
 
-  /* ===== SOBRE ===== */
-
-  #sobre .row {
-    flex-direction: column;
-    text-align: center;
+  .container-carrossel {
+    height: 460px;
+    min-height: 460px;
   }
 
-  #sobre .col-sm-4,
-  #sobre .col-sm-8 {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
+}
 
-  .container-sobre {
-    padding-left: 40px;
-    padding-right: 40px;
+
+/* ================= TABLET PEQUENO ================= */
+
+@media (max-width:750px) {
+
+  .container-carrossel {
     height: auto;
-    min-height: 480px;
+    min-height: 420px;
   }
 
-  #sobre .img-quemsomos {
-    margin-bottom: 20px;
-    max-width: 60%;
-  }
-
-
-  /* ===== CARROSSEL ===== */
+  /* imagem em cima e texto embaixo */
 
   #carouselServicos .row {
     flex-direction: column;
@@ -689,145 +673,43 @@ header h2 {
     flex: 0 0 100%;
   }
 
-  .container-carrossel {
-    padding: 25px;
-    height: auto;
-    min-height: 500px;
-  }
-
   #carouselServicos img {
     max-width: 280px;
-    /* tamanho da imagem */
     width: 100%;
     height: auto;
     margin-bottom: 20px;
   }
 
-  #carouselServicos .col-sm-4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* ===== TEXTO HEADER ===== */
-
-  .texto-header {
-    font-size: 2.5em;
-  }
-
-}
-
-/* ================= TABLET PEQUENO ================= */
-
-@media (max-width:750px) {
-
-  .carousel-item .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .carousel-item .col-sm-4,
-  .carousel-item .col-sm-8 {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-
 }
 
 
-@media (max-width:760px) {
-
-  .header-conteudo {
-    grid-template-columns: 1fr;
-  }
-
-  .header-texto {
-    margin-top: 40px;
-    padding: 25px;
-  }
-
-  .container-sobre {
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: left;
-    height: auto;
-    min-height: 400px;
 
 
-  }
-
-  .img-quemsomos {
-    margin-top: 30px;
-  }
-
-  .container-carrossel {
-    padding: 20px;
-    height: 500px;
-  }
-
-}
-
-.container-carrossel {
-  padding-left: 25px;
-  padding-right: 25px;
-  height: 500px;
-  padding: 20px;
-}
-
-.carousel-item {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-
-/* ================= CELULAR GRANDE ================= */
+/* ================= MOBILE ================= */
 
 @media (max-width:480px) {
 
   .container-carrossel {
-    height: 460px;
-    padding: 18px;
-    text-align: left;
-    padding-bottom: 60px;
-    min-height: 500px;
-  }
-
-  .carousel-item .col-sm-4,
-  .carousel-item .col-sm-8 {
-    max-width: 100%;
-    flex: 0 0 100%;
-    min-height: 500px;
-  }
-
-  .carousel-item {
-    padding-left: 20px;
-    padding-right: 12px;
-
+    height: auto;
+    min-height: 380px;
+    padding: 20px;
+    padding-bottom: 70px;
   }
 
 }
 
-.texto-header {
-  font-size: 1.9em;
-}
 
-.texto-header-baixo {
-  font-size: 14px;
-}
+/* ================= IPHONE / TELAS PEQUENAS ================= */
 
-.container-sobre {
-  padding-left: 18px;
-  padding-right: 18px;
-  font-size: 14px;
-  line-height: 1.7;
-  height: auto;
-  min-height: 300px;
+@media (max-width:340px) {
 
-}
+  .container-carrossel {
+    height: auto;
+    min-height: 350px;
+    padding: 15px;
+    padding-bottom: 70px;
+  }
 
-.img-quemsomos {
-  margin-top: 25px;
-  border-radius: 15px;
 }
 
 /* ================= GALERIA  ================= */
