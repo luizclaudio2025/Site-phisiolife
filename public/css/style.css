@@ -735,12 +735,8 @@ header h2 {
 @media (max-width:750px) {
 
   .container-carrossel {
-    height: 500px;
-    min-height: 500px;
-  }
-
-  #carouselServicos .row {
-    flex-direction: column;
+    height: 700px;
+    min-height: 700px;
   }
 
   #carouselServicos .col-sm-4 {
