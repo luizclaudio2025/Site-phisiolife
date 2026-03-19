@@ -680,6 +680,21 @@ header h2 {
     margin-bottom: 20px;
   }
 
+  #carouselServicos .col-sm-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #carouselServicos img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+
 }
 
 
