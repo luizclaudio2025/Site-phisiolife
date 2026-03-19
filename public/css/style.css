@@ -586,6 +586,7 @@ header h2 {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
+  min-height: 20px !important;
 
 }
 
@@ -605,12 +606,11 @@ header h2 {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-
   background-color: #eae9ef;
 
 }
 
-.carrossel-inner {
+.carousel-item active {
   min-height: 500px;
 }
 
@@ -628,8 +628,7 @@ header h2 {
   padding: 20px;
   box-sizing: border-box;
   height: 100%;
-
-  max-height: auto;
+  min-height: 500px;
   align-items: center;
   justify-content: center;
 
