@@ -588,54 +588,129 @@ header h2 {
   margin: 0;
 }
 
-/* ===== CONTAINER ===== */
+/* bolinhas */
+
+.carousel-indicators li,
+.carousel-indicators button {
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background-color: #eae9ef;
+
+  border: none;
+
+  opacity: 0.7;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: white;
+}
+
+.carousel-indicators button {
+  text-indent: -999px;
+}
+
+
+/* ===== CONTAINER FIXO ===== */
 
 .container-carrossel {
+
   padding: 30px;
   padding-bottom: 80px;
+
   border-radius: 20px;
+
   color: #eee9e9;
 
-  height: 500px;
-  min-height: 500px;
-
   text-align: justify;
+
+  width: 100%;
+
+  height: 540px;
+  min-height: 540px;
+  max-height: 540px;
+
   overflow: hidden;
+  position: relative;
 }
 
-/* indicadores */
-
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #eae9ef;
-}
 
 /* fundo */
 
 .carrossel {
   background-color: #0a0324;
-  color: #eee9e9;
-  height: 100%;
-  padding-bottom: 40px;
-  position: relative;
-}
-
-/* bootstrap precisa disso */
-
-.carousel,
-.carousel-inner,
-.carousel-item {
   height: 100%;
 }
+
+
+/* ===== BOOTSTRAP NORMAL ===== */
+
+#carouselServicos,
+#carouselServicos .carousel-inner,
+#carouselServicos .carousel-item {
+
+  height: 100%;
+}
+
+
+/* row fixa */
+
+#carouselServicos .row {
+  height: 100%;
+  margin: 0;
+}
+
+
+/* imagem */
+
+#carouselServicos .col-sm-4 {
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+#carouselServicos img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 /* texto */
 
+#carouselServicos .col-sm-8 {
+
+  height: 100%;
+
+  overflow: hidden;
+
+  padding: 12px;
+
+  font-size: 0.92rem;
+  line-height: 1.35;
+
+}
+
+#carouselServicos .col-sm-8 p {
+
+  font-size: 0.92rem;
+  line-height: 1.35;
+
+}
+
+
+/* não cortar errado */
+
 .container-carrossel p {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  overflow: hidden;
 }
 
 
@@ -644,8 +719,12 @@ header h2 {
 @media (max-width:1040px) {
 
   .container-carrossel {
-    height: 460px;
-    min-height: 460px;
+    height: 580px;
+    min-height: 580px;
+  }
+
+  #carouselServicos .col-sm-8 {
+    font-size: 0.9rem;
   }
 
 }
@@ -656,48 +735,25 @@ header h2 {
 @media (max-width:750px) {
 
   .container-carrossel {
-    height: auto;
-    min-height: 420px;
+    height: 500px;
+    min-height: 500px;
   }
-
-  /* imagem em cima e texto embaixo */
 
   #carouselServicos .row {
     flex-direction: column;
-    text-align: center;
-  }
-
-  #carouselServicos .col-sm-4,
-  #carouselServicos .col-sm-8 {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-
-  #carouselServicos img {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
   }
 
   #carouselServicos .col-sm-4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 45%;
   }
 
-  #carouselServicos img {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto 20px auto;
-    display: block;
+  #carouselServicos .col-sm-8 {
+    height: 55%;
+    font-size: 0.88rem;
+    line-height: 1.3;
   }
-
 
 }
-
-
 
 
 /* ================= MOBILE ================= */
@@ -705,24 +761,35 @@ header h2 {
 @media (max-width:480px) {
 
   .container-carrossel {
-    height: auto;
-    min-height: 380px;
-    padding: 20px;
-    padding-bottom: 70px;
+    height: 650px;
+    min-height: 650px;
+  }
+
+  #carouselServicos .col-sm-8 {
+    font-size: 0.82rem;
+    line-height: 1.25;
   }
 
 }
 
 
-/* ================= IPHONE / TELAS PEQUENAS ================= */
+/* ================= IPHONE ================= */
 
 @media (max-width:340px) {
 
   .container-carrossel {
-    height: auto;
-    min-height: 350px;
-    padding: 15px;
-    padding-bottom: 70px;
+    height: 820px;
+    min-height: 820px;
+  }
+
+  #carouselServicos .col-sm-4 {
+    height: 40%;
+  }
+
+  #carouselServicos .col-sm-8 {
+    height: 60%;
+    font-size: 0.78rem;
+    line-height: 1.2;
   }
 
 }
