@@ -443,7 +443,7 @@ header h2 {
   color: #160350;
 }
 
-/* IMAGEM 
+/* IMAGEM */
 
 .header-imagem {
   display: flex;
@@ -453,11 +453,11 @@ header h2 {
 }
 
 .img-inicio {
-  margin-top: 70px !important;
+  margin-top: 70px;
   max-width: 90%;
   height: auto;
   border-radius: 20px;
-}*/
+}
 
 /* ================= RESPONSIVO ================= */
 
