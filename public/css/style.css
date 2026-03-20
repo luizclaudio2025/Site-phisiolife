@@ -735,8 +735,8 @@ header h2 {
 @media (max-width:750px) {
 
   .container-carrossel {
-    height: 700px;
-    min-height: 700px;
+    height: 500px;
+    min-height: 500px;
   }
 
   #carouselServicos .col-sm-4 {
@@ -754,11 +754,11 @@ header h2 {
 
 /* ================= MOBILE ================= */
 
-@media (max-width:480px) {
+@media screen and (max-device-width:480px) {
 
   .container-carrossel {
-    height: 650px;
-    min-height: 650px;
+    height: 650px !important;
+    min-height: 650px !important;
   }
 
   #carouselServicos .col-sm-8 {
@@ -771,11 +771,11 @@ header h2 {
 
 /* ================= IPHONE ================= */
 
-@media (max-width:340px) {
+@media screen and (max-device-width:340px) {
 
   .container-carrossel {
-    height: 820px;
-    min-height: 820px;
+    height: 620px !important;
+    min-height: 620px !important;
   }
 
   #carouselServicos .col-sm-4 {
@@ -784,8 +784,8 @@ header h2 {
 
   #carouselServicos .col-sm-8 {
     height: 60%;
-    font-size: 0.78rem;
-    line-height: 1.2;
+    font-size: 0.78rem !important;
+    line-height: 1.2 !important;
   }
 
 }
