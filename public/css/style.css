@@ -401,17 +401,6 @@ header h2 {
 
 /* ===== GRID DESKTOP ===== */
 
-.video-ajuste {
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 40px;
-  border-radius: 10px;
-
-}
-
 .header-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
